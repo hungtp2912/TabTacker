@@ -80,6 +80,7 @@
         </a>
       </li>
     </ul>
+    <input type="text" name="text" v-model="test">
   </div>
 </template>
 
