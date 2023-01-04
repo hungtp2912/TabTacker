@@ -48,3 +48,16 @@ Source project from freeCodeCamp.org: Full stack web app using Vue.js and Expres
                             "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
                             "lint": "eslint src/*.js"
                         }, //
+
+    Dealing with error: // /Users/henrytu/HenryFile/AppsDev/WebDev/YoutubeLearning/TabTacker/server/src/app.js
+                            1:7   error  'express' is assigned a value but never used     no-unused-vars
+                            1:17  error  'require' is not defined                         no-undef
+                            2:7   error  'bodyParser' is assigned a value but never used  no-unused-vars
+                            2:20  error  'require' is not defined                         no-undef
+                            3:7   error  'cors' is assigned a value but never used        no-unused-vars
+                            3:14  error  'require' is not defined                         no-undef //
+    In .eslintrc.js add: "env": {
+                                    "browser": true,
+                                    "node": true,
+                                    "es2021": true
+                                }
