@@ -35,3 +35,16 @@ Source project from freeCodeCamp.org: Full stack web app using Vue.js and Expres
     ✔ Would you like to install them now? · No / Yes
     ✔ Which package manager do you want to use? · npm
     Installing eslint-plugin-vue@latest, eslint@latest
+4- Run npm i -s express body-parser cors morgan
+    Dealing with error: // "You are linting "node_modules/ipaddr.js", but all of the files matching the glob pattern                "node_modules/ipaddr.js" are ignored.
+
+                            If you don't want to lint these files, remove the pattern "node_modules/ipaddr.js" from the list of arguments passed to ESLint.
+
+                            If you do want to lint these files, try the following solutions:
+
+                            * Check your .eslintignore file, or the eslintIgnore property in package.json, to ensure that the files are not configured to be ignored.
+                            * Explicitly list the files from this glob that you'd like to lint on the command-line, rather than providing a glob as an argument." //
+    In package.json change to: // "scripts": {
+                            "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
+                            "lint": "eslint src/*.js"
+                        }, //
